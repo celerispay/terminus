@@ -14,8 +14,14 @@ declare module "@godaddy/terminus" {
     [key: string]: HealthCheck | boolean;
   }
 
+  export type BasicAuth = {
+    username: string
+    password: string
+  }
+
   export interface TerminusOptions {
     healthChecks?: HealthCheckMap;
+    authentication?: BasicAuth;
     timeout?: number;
     signal?: string;
     signals?: string[];
