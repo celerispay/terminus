@@ -15,8 +15,7 @@ declare module "@godaddy/terminus" {
   }
 
   export type BasicAuth = {
-    username: string
-    password: string
+    [key: string]: string;
   }
 
   export interface TerminusOptions {
